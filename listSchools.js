@@ -14,6 +14,8 @@ const haversineDistance = (coords1, coords2) => {
 };
 
 router.get('/listSchools', (req, res) => {
+    res.send("hello world")
+    res.end()
     const { latitude, longitude } = req.query;
     if (!latitude || !longitude) {
         return res.status(400).json({ error: 'Latitude and longitude are required' });
